@@ -16,8 +16,8 @@ from freegames import vector
 ball = vector(-200, -200)
 speed = vector(0, 0)
 targets = []
-xtargetspeed = random.uniform(0.5,2.5)
-yballspeed = random.uniform(0.25,0.75)
+xtargetspeed = random.uniform(0.5,2.5) # Velocidad random de los targets
+yballspeed = random.uniform(0.25,0.75) # Velocidad random del proyectil
 
 def tap(x, y):
     "Respond to screen tap."
