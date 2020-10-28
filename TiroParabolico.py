@@ -8,7 +8,7 @@ Exercises
 4. Change the speed of the ball.
 
 """
-
+import random
 from random import randrange
 from turtle import *
 from freegames import vector
@@ -16,6 +16,8 @@ from freegames import vector
 ball = vector(-200, -200)
 speed = vector(0, 0)
 targets = []
+xtargetspeed = random.uniform(0.5,2.5)
+yballspeed = random.uniform(0.25,0.75)
 
 def tap(x, y):
     "Respond to screen tap."
@@ -51,10 +53,10 @@ def move():
         targets.append(target)
 
     for target in targets:#Mover pelotas
-        target.x -= 0.5
+        target.x -= xtargetspeed
 
     if inside(ball):#Actualizar la velocidad de la bola de cañón
-        speed.y -= 0.35
+        speed.y -= yballspeed
         ball.move(speed)
 
     dupe = targets.copy()#Crear una copia de todas las bolas
